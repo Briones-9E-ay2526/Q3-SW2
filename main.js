@@ -1,17 +1,28 @@
 function calculateDiscount() {
     let budget = document.getElementById("budget").value;
-    let valueDiscount = number(budget*0.25;)
+    let valueDiscount = Number(budget * 0.2);
+    
 
-    document.getElementById().innerHTML =
+    document.getElementById("discountBadge").innerHTML = `
+    <div class="container bg-secondary rounded mt-5 p-3">
+        <div class="text-white">Recommended Brands</div>
+        <button class="btn btn-primary mt-3">Lenovo</button>
+        <button class="btn btn-primary mt-3">Mac</button>
+        <button class="btn btn-primary mt-3">MSI</button>
+        <br></br>
+        <p>Eligible discount: <span class="badge bg-danger">${valueDiscount}</span></p>
+    </div>`;
 
-    if (budget >= 10000) {
-        discount = 0.25; // 25% discount
-    } else if (budget >= 5000) {
-        discount = 0.15; // 15% discount
-    } else if (budget >= 2500) {
-        discount = 0.1; // 10% discount
-    }
+}
 
-    let discountedPrice = budget - (budget * discount);
-    document.getElementById("discountedPrice").innerText = "Discounted Price: $" + discountedPrice.toFixed(2);
+// Store location
+function showStoreLocations(){
+    document.getElementById("StoreLocationsBadge").innerHTML = `
+    <div class="container bg-secondary rounded mt-5 p-3">
+        <div class="text-white">Store Locations</div>
+        <button class="btn btn-primary mt-3">VillMan Computers</button>
+        <button class="btn btn-primary mt-3">Easy PC</button>
+        <button class="btn btn-primary mt-3">PC Express</button>
+    </div>`;
+
 }
